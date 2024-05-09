@@ -1,6 +1,6 @@
 ﻿namespace GestorDeEstudantesT6
 {
-    partial class Form1
+    partial class Login_Form
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form));
             this.buttonLogin = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.pictureBoxUsuario = new System.Windows.Forms.PictureBox();
@@ -62,9 +63,11 @@
             // 
             // pictureBoxUsuario
             // 
-            this.pictureBoxUsuario.Location = new System.Drawing.Point(51, 95);
+            this.pictureBoxUsuario.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsuario.Image")));
+            this.pictureBoxUsuario.Location = new System.Drawing.Point(85, 95);
             this.pictureBoxUsuario.Name = "pictureBoxUsuario";
-            this.pictureBoxUsuario.Size = new System.Drawing.Size(184, 112);
+            this.pictureBoxUsuario.Size = new System.Drawing.Size(120, 112);
+            this.pictureBoxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxUsuario.TabIndex = 2;
             this.pictureBoxUsuario.TabStop = false;
             // 
@@ -106,6 +109,7 @@
             this.textBoxUsuario.Name = "textBoxUsuario";
             this.textBoxUsuario.Size = new System.Drawing.Size(100, 20);
             this.textBoxUsuario.TabIndex = 6;
+            this.textBoxUsuario.TextChanged += new System.EventHandler(this.textBoxUsuario_TextChanged);
             // 
             // textBoxSenha
             // 
@@ -114,7 +118,7 @@
             this.textBoxSenha.Size = new System.Drawing.Size(100, 20);
             this.textBoxSenha.TabIndex = 7;
             // 
-            // Form1
+            // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -127,8 +131,9 @@
             this.Controls.Add(this.pictureBoxUsuario);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonLogin);
-            this.Name = "Form1";
+            this.Name = "Login_Form";
             this.Text = "SGA - Acessar";
+            this.Load += new System.EventHandler(this.Login_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
