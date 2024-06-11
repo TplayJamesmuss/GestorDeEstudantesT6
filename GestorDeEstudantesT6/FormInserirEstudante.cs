@@ -57,10 +57,13 @@ namespace GestorDeEstudantesT6
                 }
                 else
                 {
-                    MessageBox.Show("Novo aluno cadastrado", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Novo aluno cadastrado", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
-
+            else
+            {
+                MessageBox.Show("Campos não prenchidos!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void buttonEnviarFoto_Click(object sender, EventArgs e)
@@ -98,6 +101,11 @@ namespace GestorDeEstudantesT6
         }
 
         private void radioButtonFeminino_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxFoto_Click(object sender, EventArgs e)
         {
 
         }
