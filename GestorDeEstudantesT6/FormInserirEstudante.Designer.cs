@@ -220,7 +220,7 @@
             this.buttonCadastrar.Name = "buttonCadastrar";
             this.buttonCadastrar.Size = new System.Drawing.Size(135, 51);
             this.buttonCadastrar.TabIndex = 20;
-            this.buttonCadastrar.Text = "Cadastrar";
+            this.buttonCadastrar.Text = "SGA - Novo Cadastro";
             this.buttonCadastrar.UseVisualStyleBackColor = true;
             this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
@@ -246,6 +246,7 @@
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.label2);
             this.Name = "FormInserirEstudante";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormInserirEstudante";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
