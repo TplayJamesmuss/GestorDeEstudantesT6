@@ -42,7 +42,7 @@ namespace GestorDeEstudantesT6
                 return false;
             }
         }
-        
+
         public bool atualizarEstudante(int id, string nome, string sobrenome, DateTime nascimento, string telefone, string genero, string endereco, MemoryStream foto)
         {
             MySqlCommand comando = new MySqlCommand("UPDATE `estudantes` SET `nome`= @nome,`sobrenome`= @sobrenome,`nascimento`= @nascimento,`genero`= @genero,`telefone`= @telefone,`endereco`= @endereco,`foto`= @foto WHERE `id`= @id", meuBancoDeDados.getConexao);
@@ -69,5 +69,25 @@ namespace GestorDeEstudantesT6
                 return false;
             }
         }
+
+        public bool apagarEstudante(int id)
+        {
+            MySqlCommand comando = new MySqlCommand("DELETE FROM `estudantes` WHERE `id` =@id", meuBancoDeDados.getConexao);
+
+            comando.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
+
+            meuBancoDeDados.abrirConexao();
+            if (comando.ExecuteNonQuery()== 1)
+            {
+                meuBancoDeDados.fecharConexao();
+                return true;
+            }
+            else
+            {
+                meuBancoDeDados.fecharConexao();
+                return false;
+            }
+        }
+        
     }
 }
